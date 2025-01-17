@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase CRUD</title>
+
+    <!-- BOOTSWATCH Theme -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/yeti/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body class="bg-dark text-light">
+    <!-- Add Task Section -->
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body">
+              <h1 class="h4 text-primary">Add Task</h1>
+
+              <form id="task-form">
+                <div class="mb-3">
+                  <label for="task-title" class="form-label">Title:</label>
+                  <input
+                    type="text"
+                    id="task-title"
+                    class="form-control"
+                    placeholder="Task Title"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="task-description" class="form-label">Description:</label>
+                  <textarea
+                    id="task-description"
+                    rows="3"
+                    class="form-control"
+                    placeholder="Task Description"
+                    required
+                  ></textarea>
+                </div>
+
+                <button id="btn-task-form" class="btn btn-primary me-2" type="submit">
+                  Save
+                </button>
+                <button
+                  id="btn-task-cancel"
+                  class="btn btn-secondary"
+                  type="button"
+                >
+                  Cancel
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Task List Section -->
+        <div class="col-md-6" id="tasks-container"></div>
+      </div>
+    </div>
+
+    <!-- Firebase and App Script -->
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js"></script>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

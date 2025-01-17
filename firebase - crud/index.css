@@ -1,0 +1,61 @@
+/* Global Styles */
+body {
+    background-color: #2c2c2c;
+    color: #f8f9fa;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Task Form Card */
+  .card {
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card h1 {
+    font-weight: 600;
+  }
+  
+  /* Input and Textarea */
+  form input,
+  form textarea {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Buttons */
+  button {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Tasks Container */
+  #tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .card.shadow {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Task Card */
+  #tasks-container .card {
+    border: 1px solid #007bff;
+    background-color: #f8f9fa;
+    color: #000;
+  }
